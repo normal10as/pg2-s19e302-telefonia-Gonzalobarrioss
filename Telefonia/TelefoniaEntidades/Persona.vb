@@ -1,11 +1,16 @@
 ﻿Public Class Persona
+    Public Sub New(Nombre, Apellido, Documento)
+        Me.Nombre = Nombre
+        Me.Apellido = Apellido
+        Me.Documento = Documento
+    End Sub
     Private _apellido As String
     Public Property Apellido As String
         Get
             Return _apellido
         End Get
         Set(value As String)
-            If value.Length <= 30 Then
+            If value.Length <= 30 And value.Length > 0 Then
                 _apellido = value
             End If
         End Set
@@ -17,7 +22,7 @@
             Return _nombre
         End Get
         Set(value As String)
-            If value.Length <= 50 Then
+            If value.Length <= 50 And value.Length > 0 Then
                 _nombre = value
             End If
         End Set
