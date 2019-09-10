@@ -1,5 +1,6 @@
 ﻿Public Class Empresa
-    Public Sub New(RazonSocial, Cuit)
+    Inherits Cliente
+    Public Sub New(RazonSocial As String, Cuit As String)
         Me.RazonSocial = RazonSocial
         Me.Cuit = Cuit
     End Sub
@@ -27,4 +28,8 @@
             End If
         End Set
     End Property
+
+    Public Function toString() As String
+        Return RazonSocial & " " & Cuenta
+    End Function
 End Class

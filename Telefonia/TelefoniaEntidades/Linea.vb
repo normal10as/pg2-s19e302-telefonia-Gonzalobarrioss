@@ -1,5 +1,5 @@
 ﻿Public Class Linea
-    Public Sub New(codigoArea, Numero)
+    Public Sub New(codigoArea As UShort, Numero As UInteger)
         Me.CodigoArea = codigoArea
         Me.Numero = Numero
     End Sub
@@ -28,19 +28,28 @@
         End Set
     End Property
 
-    Private _estado As String
     Public ReadOnly Property Estado As String
         Get
-            Return _estado
+            If LineaEstado = 0 Then
+                Return "supendido"
+            End If
+            Return "activo"
         End Get
     End Property
 
-    Sub suspender()
-        _estado = 0
+    Private LineaEstado As Byte = 1
+    Public Sub suspender()
+        LineaEstado = 0
     End Sub
 
-    Sub reactivar()
-        _estado = 1
+    Public Sub reactivar()
+        LineaEstado = 1
     End Sub
 
+    Public Function toString() As String
+        If LineaEstado = 0 Then
+            Return CodigoArea & " " & Numero & " suspendida"
+        End If
+        Return CodigoArea & " " & Numero
+    End Function
 End Class

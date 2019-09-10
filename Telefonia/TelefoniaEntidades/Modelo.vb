@@ -1,6 +1,6 @@
 ﻿Public Class Modelo
 
-    Public Sub New(nombreModelo)
+    Public Sub New(nombreModelo As String)
         Me.NombreModelo = nombreModelo
     End Sub
     Private _nombreModelo As String
@@ -14,4 +14,8 @@
             End If
         End Set
     End Property
+
+    Public Function toString() As String
+        Return NombreModelo
+    End Function
 End Class

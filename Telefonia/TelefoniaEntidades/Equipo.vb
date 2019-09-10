@@ -1,7 +1,9 @@
 ﻿Public Class Equipo
-    Public Sub New()
-
-    End Sub
+    'Public Sub New(marca As Marca, modelo As Modelo, serieEquipo As String)
+    'Me.SerieEquipo = serieEquipo
+    '   marca = marca
+    '   modelo = modelo
+    'End Sub
     Private _serieEquipo As String
     Public Property SerieEquipo As String
         Get
@@ -15,15 +17,18 @@
         End Set
     End Property
 
-    Private _fechaVenta As Date
     Public ReadOnly Property FechaVenta As Date
         Get
-            Return _fechaVenta
+            Return vender()
         End Get
     End Property
 
-    Sub vender(fecha As Date)
-        Console.WriteLine("fecha de venta: " & Date.Now)
-    End Sub
+    Public Function vender() As Date
+        Return Date.Now
+    End Function
+
+    Public Function toString() As String
+        Return SerieEquipo
+    End Function
 
 End Class

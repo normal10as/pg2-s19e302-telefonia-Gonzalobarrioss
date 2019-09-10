@@ -1,5 +1,6 @@
 ﻿Public Class Persona
-    Public Sub New(Nombre, Apellido, Documento)
+    Inherits Cliente
+    Public Sub New(Nombre As String, Apellido As String, Documento As UInteger)
         Me.Nombre = Nombre
         Me.Apellido = Apellido
         Me.Documento = Documento
@@ -37,4 +38,8 @@
             _documento = value
         End Set
     End Property
+
+    Public Function toString() As String
+        Return Apellido & " " & Nombre & " " & Cuenta
+    End Function
 End Class

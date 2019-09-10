@@ -1,6 +1,6 @@
 ﻿Public Class Marca
 
-    Public Sub New(nombreMarca)
+    Public Sub New(nombreMarca As String)
         Me.NombreMarca = nombreMarca
     End Sub
     Private _nombreMarca As String
@@ -14,4 +14,7 @@
             End If
         End Set
     End Property
+    Public Function toString() As String
+        Return NombreMarca
+    End Function
 End Class
