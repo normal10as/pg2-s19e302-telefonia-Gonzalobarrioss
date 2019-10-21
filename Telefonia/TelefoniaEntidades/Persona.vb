@@ -39,7 +39,7 @@
         End Set
     End Property
 
-    Public Function toString() As String
+    Public Overrides Function toString() As String
         Return Apellido & " " & Nombre & " " & Cuenta
     End Function
 End Class

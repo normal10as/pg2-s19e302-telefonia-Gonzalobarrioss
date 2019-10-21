@@ -1,17 +1,17 @@
 ﻿Public Class Equipo
-    'Public Sub New(marca As Marca, modelo As Modelo, serieEquipo As String)
-    'Me.SerieEquipo = serieEquipo
-    '   marca = marca
-    '   modelo = modelo
-    'End Sub
-    Private _serieEquipo As String
-    Public Property SerieEquipo As String
+    ' Public Sub New(marca As Marca, modelo As Modelo, serieEquipo As String)
+    ' Me.Serie = Serie
+    '     marca = marca
+    '     modelo = modelo
+    ' End Sub
+    Private _serie As String
+    Public Property Serie As String
         Get
-            Return _serieEquipo
+            Return _serie
         End Get
         Set(value As String)
             If value.Length <= 15 And value.Length > 0 Then
-                _serieEquipo = value
+                _serie = value
             End If
 
         End Set
@@ -27,8 +27,8 @@
         Return Date.Now
     End Function
 
-    Public Function toString() As String
-        Return SerieEquipo
+    Public Overrides Function toString() As String
+        Return Serie
     End Function
 
 End Class

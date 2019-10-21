@@ -29,7 +29,7 @@
         End Set
     End Property
 
-    Public Function toString() As String
+    Public Overrides Function toString() As String
         Return RazonSocial & " " & Cuenta
     End Function
 End Class

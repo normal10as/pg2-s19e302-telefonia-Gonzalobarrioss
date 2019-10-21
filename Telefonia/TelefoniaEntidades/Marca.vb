@@ -1,20 +1,20 @@
 ﻿Public Class Marca
 
-    Public Sub New(nombreMarca As String)
-        Me.NombreMarca = nombreMarca
+    Public Sub New(nombre As String)
+        Me.Nombre = nombre
     End Sub
-    Private _nombreMarca As String
-    Public Property NombreMarca As String
+    Private _nombre As String
+    Public Property Nombre As String
         Get
-            Return _nombreMarca
+            Return _nombre
         End Get
         Set(value As String)
             If value.Length <= 30 And value.Length > 0 Then
-                _nombreMarca = value
+                _nombre = value
             End If
         End Set
     End Property
-    Public Function toString() As String
-        Return NombreMarca
+    Public Overrides Function toString() As String
+        Return Nombre
     End Function
 End Class

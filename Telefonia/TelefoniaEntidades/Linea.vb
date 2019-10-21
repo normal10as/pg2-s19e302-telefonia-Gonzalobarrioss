@@ -46,7 +46,7 @@
         LineaEstado = 1
     End Sub
 
-    Public Function toString() As String
+    Public Overrides Function toString() As String
         If LineaEstado = 0 Then
             Return CodigoArea & " " & Numero & " suspendida"
         End If
