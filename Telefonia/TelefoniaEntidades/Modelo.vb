@@ -1,8 +1,19 @@
 ﻿Public Class Modelo
-
     Public Sub New(nombre As String)
         Me.Nombre = nombre
     End Sub
+
+    Private _marca As Marca
+    Public Property Marca As Marca
+        Get
+            Return _marca
+        End Get
+        Set(value As Marca)
+            _marca = value
+        End Set
+    End Property
+
+
     Private _nombre As String
     Public Property Nombre As String
         Get

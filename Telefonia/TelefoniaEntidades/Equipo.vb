@@ -1,9 +1,18 @@
 ﻿Public Class Equipo
-    ' Public Sub New(marca As Marca, modelo As Modelo, serieEquipo As String)
-    ' Me.Serie = Serie
-    '     marca = marca
-    '     modelo = modelo
-    ' End Sub
+    Public Sub New(marca As Marca, modelo As Modelo, serie As String)
+        Me.Serie = serie
+        modelo.Marca = marca
+        _modelo = modelo
+    End Sub
+    Private _modelo As Modelo
+    Public Property Modelo As Modelo
+        Get
+            Return _modelo
+        End Get
+        Set(value As Modelo)
+            _modelo = value
+        End Set
+    End Property
     Private _serie As String
     Public Property Serie As String
         Get

@@ -3,6 +3,15 @@
         Me.CodigoArea = codigoArea
         Me.Numero = Numero
     End Sub
+    Private _equipo As Equipo
+    Public Property Equipo As Equipo
+        Get
+            Return _equipo
+        End Get
+        Set(value As Equipo)
+            _equipo = value
+        End Set
+    End Property
     Private _codigoArea As UShort
     Public Property CodigoArea As UShort
         Get
