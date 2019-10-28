@@ -1,6 +1,7 @@
 ﻿Public Class Modelo
-    Public Sub New(nombre As String)
+    Public Sub New(nombre As String, marca As Marca)
         Me.Nombre = nombre
+        Me.Marca = marca
     End Sub
 
     Private _marca As Marca
